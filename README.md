@@ -20,7 +20,7 @@ para trabajar en frontend.
 Para Windoms 10
 
 ```bash
-  cd AppData/Local
+  cd User/{Usuario}/AppData/Local
 ```
 
 Clonar repositorio
@@ -31,7 +31,7 @@ Clonar repositorio
 Renombrar carpeta del repositorio
 
 ```bash
-  Rename a nvim
+  REN nvim_vimrc
 ```
 
 Ejecutar nvim

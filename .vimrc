@@ -50,7 +50,6 @@ set termguicolors
 let ayucolor="dark"
 colorscheme ayu
 
-let g:user_emmet_install_global = 0
 autocmd FileType html,css,php EmmetInstall
 
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
@@ -60,7 +59,13 @@ nmap <Leader>z :bn<CR>
 nmap <Leader>x :bd<CR>
 nmap <leader>w :w<CR>
 
-let g:user_emmet_mode='a'    "enable all function in all mode.
+let g:coc_global_extensions = [
+      \'coc-css',
+      \'coc-html',
+      \'coc-emmet',
+      \'coc-html-css-support',
+      \'coc-tsserver'
+      \]
 
 " TextEdit might fail if hidden is not set.
 set hidden

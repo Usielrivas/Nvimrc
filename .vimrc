@@ -31,15 +31,11 @@ Plug 'vim-scripts/AutoClose'
 
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 "tema"
-Plug 'ayu-theme/ayu-vim'
-"emmet"
-Plug 'mattn/emmet-vim'
+Plug 'Usielrivas/ayu-vim'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'scrooloose/nerdtree'
-
-Plug 'tpope/vim-fugitive'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'  " Temas para airline
@@ -50,9 +46,6 @@ set termguicolors
 let ayucolor="dark"
 colorscheme ayu
 
-autocmd FileType html,css,php EmmetInstall
-
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 let mapleader=" "
 nmap <Leader>nt :NERDTreeFind<CR>
 nmap <Leader>z :bn<CR>
@@ -244,8 +237,6 @@ let g:indentLine_bufNameExclude = ['NERD_tree.*', 'term:.*']
 
 let g:indentLine_defaultGroup = 'SpecialKey'
 
-let g:user_emmet_expandabbr_key='<Tab>'
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 " avoid freezing the vim process forever, see
 " https://github.com/neovim/neovim/issues/6660

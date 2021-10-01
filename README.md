@@ -31,7 +31,7 @@ Clonar repositorio
 Renombrar carpeta del repositorio
 
 ```bash
-  REN nvim_vimrc
+  REN nvim_vimrc nvim
 ```
 
 Ejecutar nvim
@@ -43,5 +43,5 @@ Ejecutar nvim
   
 ## Otros detalles
 
-En el repositorio incluye el archivo coc-preferencia.json
+- En el repositorio incluye el archivo coc-preferencia.json
 este se debe copiar manual al archivo CoConfig.

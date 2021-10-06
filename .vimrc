@@ -9,6 +9,7 @@ set ruler
 set encoding=utf-8
 set showmatch
 set sw=4
+""set nowrap elimina el salto de lineas grandes
 set relativenumber
 
 set tabstop=4       " The width of a TAB is set to 4.
@@ -40,7 +41,24 @@ Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'  " Temas para airline
 Plug 'Yggdroot/indentLine'
+Plug 'vim-scripts/LargeFile'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
 call plug#end()
+
+
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+                \ 'Modified'  :'M',
+                \ 'Staged'    :'S',
+                \ 'Untracked' :'#',
+                \ 'Renamed'   :'R',
+                \ 'Unmerged'  :'═',
+                \ 'Deleted'   :'X',
+                \ 'Dirty'     :'Di',
+                \ 'Ignored'   :'!',
+                \ 'Clean'     :'C',
+                \ 'Unknown'   :'?',
+                \ }
 
 set termguicolors
 let ayucolor="dark"

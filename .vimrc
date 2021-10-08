@@ -39,7 +39,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'  " Temas para airline
+"Plug 'vim-airline/vim-airline-themes'  " Temas para airline
 Plug 'Yggdroot/indentLine'
 Plug 'vim-scripts/LargeFile'
 Plug 'tpope/vim-fugitive'
@@ -55,7 +55,7 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Renamed'   :'R',
                 \ 'Unmerged'  :'═',
                 \ 'Deleted'   :'X',
-                \ 'Dirty'     :'Di',
+                \ 'Dirty'     :'*',
                 \ 'Ignored'   :'!',
                 \ 'Clean'     :'C',
                 \ 'Unknown'   :'?',
@@ -244,9 +244,10 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 let g:airline#extensions#tabline#enabled = 1  " Mostrar buffers abiertos (como pestañas)
 let g:airline#extensions#tabline#fnamemod = ':t'  " Mostrar sólo el nombre del archivo
+let g:airline_theme= 'ayu_mirage'  " Mostrar sólo el nombre del archivo
 
 " Cargar fuente Powerline y símbolos (ver nota)
-""let g:airline_powerline_fonts = 1
+"let g:airline_powerline_fonts = 1
 
 set noshowmode  " No mostrar el modo actual (ya lo muestra la barra de estado)
 

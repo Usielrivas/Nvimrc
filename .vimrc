@@ -28,9 +28,9 @@ set noshowmode
 
 call plug#begin('~/AppData/Local/nvim/plug_vim')
 
-Plug 'vim-scripts/AutoClose'
+Plug 'Raimondi/delimitMate'
 
-Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+""Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 "tema"
 Plug 'Usielrivas/ayu-vim'
 

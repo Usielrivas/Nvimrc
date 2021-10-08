@@ -39,7 +39,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 
 Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'  " Temas para airline
+Plug 'vim-airline/vim-airline-themes'  " Temas para airline
 Plug 'Yggdroot/indentLine'
 Plug 'vim-scripts/LargeFile'
 Plug 'tpope/vim-fugitive'

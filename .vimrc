@@ -1,3 +1,4 @@
+"Ajustes Basico
 set number 
 set mouse=a
 set numberwidth=1
@@ -5,13 +6,10 @@ set clipboard=unnamed
 syntax enable
 set showcmd
 set ruler
-
 set encoding=utf-8
 set showmatch
 set sw=4
-""set nowrap elimina el salto de lineas grandes
-set relativenumber
-
+set relativenumber "Desabilita el salto de linea automatico, en lineas con larga longitud"
 set tabstop=4       " The width of a TAB is set to 4.
                     " Still it is a \t. It is just that
                     " Vim will interpret it to be having
@@ -26,28 +24,63 @@ set expandtab       " Expand TABs to spaces
 set laststatus=2
 set noshowmode
 
+"Plug Vim
 call plug#begin('~/AppData/Local/nvim/plug_vim')
 
+"Cierra comillas y llaves automaticamnete
 Plug 'Raimondi/delimitMate'
-
-""Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-"tema"
+" Tema ayu Personalizado
 Plug 'Usielrivas/ayu-vim'
-
+" Coc Plug de auto completado
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
+"Gestor de archivo
 Plug 'scrooloose/nerdtree'
-
+"Plug para personalizar linea de estado
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'  " Temas para airline
+"Plug de temas para linea de estado nesario para conservar el estilo
+Plug 'vim-airline/vim-airline-themes'
+"plug para Indentado y no perder las buenas practicas de estructurado
 Plug 'Yggdroot/indentLine'
+"Optimiza vim para archivos grandes
 Plug 'vim-scripts/LargeFile'
+"Plug para usar Git en vim
 Plug 'tpope/vim-fugitive'
+"Permite visualizar el Git status en nerdtree
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 call plug#end()
 
+"Fin Plug vim
 
+"Atajos personalizados
+
+"Asigna leader a espacio
+let mapleader=" "
+"nt + leader open nerdtree
+nmap <Leader>nt :NERDTreeFind<CR>
+"Cambio de pestaña/buffer
+nmap <Leader>z :bn<CR>
+"Cierra buffer
+nmap <Leader>x :bd<CR>
+"Guarda
+nmap <leader>w :w<CR>
+
+"Ajustes para theme Ayu
+set termguicolors
+let ayucolor="dark"
+colorscheme ayu
+
+"Ajustes para airline
+let g:airline#extensions#tabline#enabled = 1  " Mostrar buffers abiertos (como pestañas)
+let g:airline#extensions#tabline#fnamemod = ':t'  " Mostrar sólo el nombre del archivo
+let g:airline_theme= 'ayu_mirage'  "Tema para barra de estado
+
+"Ajustes para plug de Indentado
+let g:indentLine_fileTypeExclude = ['text', 'sh', 'help', 'terminal']
+let g:indentLine_bufNameExclude = ['NERD_tree.*', 'term:.*']
+let g:indentLine_defaultGroup = 'SpecialKey'
+
+"Ajuste para git status en nerdtree/ simbolos de estado
 let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Modified'  :'M',
                 \ 'Staged'    :'S',
@@ -61,16 +94,7 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Unknown'   :'?',
                 \ }
 
-set termguicolors
-let ayucolor="dark"
-colorscheme ayu
-
-let mapleader=" "
-nmap <Leader>nt :NERDTreeFind<CR>
-nmap <Leader>z :bn<CR>
-nmap <Leader>x :bd<CR>
-nmap <leader>w :w<CR>
-
+"Automatiza la instalacion de plug para Coc
 let g:coc_global_extensions = [
       \'coc-css',
       \'coc-html',
@@ -242,24 +266,14 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 
-let g:airline#extensions#tabline#enabled = 1  " Mostrar buffers abiertos (como pestañas)
-let g:airline#extensions#tabline#fnamemod = ':t'  " Mostrar sólo el nombre del archivo
-let g:airline_theme= 'ayu_mirage'  " Mostrar sólo el nombre del archivo
-
-" Cargar fuente Powerline y símbolos (ver nota)
-"let g:airline_powerline_fonts = 1
-
-set noshowmode  " No mostrar el modo actual (ya lo muestra la barra de estado)
-
-" No mostrar en ciertos tipos de buffers y archivos
-let g:indentLine_fileTypeExclude = ['text', 'sh', 'help', 'terminal']
-let g:indentLine_bufNameExclude = ['NERD_tree.*', 'term:.*']
-
-let g:indentLine_defaultGroup = 'SpecialKey'
 
 
-" avoid freezing the vim process forever, see
-" https://github.com/neovim/neovim/issues/6660
+
+
+
+"Solucion de errores
+"
+"Esto corrige el bug de contro + z que freeza nvim en windows
 if has('win32')
     nmap <C-z> <Nop>
 endif

@@ -1,4 +1,4 @@
-"Ajustes Basico
+ "Ajustes Basico
 set number 
 set mouse=a
 set numberwidth=1
@@ -48,6 +48,8 @@ Plug 'tpope/vim-fugitive'
 "Permite visualizar el Git status en nerdtree
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
+Plug 'easymotion/vim-easymotion'
+
 call plug#end()
 
 "Fin Plug vim
@@ -62,13 +64,21 @@ nmap <Leader>nt :NERDTreeFind<CR>
 nmap <Leader>z :bn<CR>
 "Cierra buffer
 nmap <Leader>x :bd<CR>
+"Agranda y encoge pestaña
+nmap <Leader>- <c-w><
+nmap <Leader>+ <c-w>>
 "Guarda
-nmap <leader>w :w<CR>
+nmap w :w<CR>
+"cerrar
+nmap q :wqa <CR>
 
 "Ajustes para theme Ayu
 set termguicolors
 let ayucolor="dark"
 colorscheme ayu
+
+" s{char}{char} to move to {char}{char}
+nmap s <Plug>(easymotion-overwin-f2)
 
 "Ajustes para airline
 let g:airline#extensions#tabline#enabled = 1  " Mostrar buffers abiertos (como pestañas)
@@ -93,6 +103,9 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Clean'     :'C',
                 \ 'Unknown'   :'?',
                 \ }
+
+"Ancho de nerdtree
+let g:NERDTreeWinSize=22
 
 "Automatiza la instalacion de plug para Coc
 let g:coc_global_extensions = [

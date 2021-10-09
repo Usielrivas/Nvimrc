@@ -47,7 +47,7 @@ Plug 'vim-scripts/LargeFile'
 Plug 'tpope/vim-fugitive'
 "Permite visualizar el Git status en nerdtree
 Plug 'Xuyuanp/nerdtree-git-plugin'
-
+"Plug Easymotion
 Plug 'easymotion/vim-easymotion'
 
 call plug#end()
@@ -67,10 +67,10 @@ nmap <Leader>x :bd<CR>
 "Agranda y encoge pestaña
 nmap <Leader>- <c-w><
 nmap <Leader>+ <c-w>>
-"Guarda
+"Guardar
 nmap w :w<CR>
 "cerrar
-nmap q :wqa <CR>
+nmap q :qa <CR>
 
 "Ajustes para theme Ayu
 set termguicolors

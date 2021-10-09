@@ -104,7 +104,7 @@ let g:coc_global_extensions = [
       \]
 
 "Enlaces
-so ./Config/coc-config.vim "Ajustes para coc
+so ~/AppData/Local/nvim/Config/coc-config.vim "Ajustes para coc
 
 "Solucion de errores
 "

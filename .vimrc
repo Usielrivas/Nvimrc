@@ -68,7 +68,7 @@ nmap <Leader>x :bd<CR>
 nmap <Leader>- <c-w><
 nmap <Leader>+ <c-w>>
 "Guardar
-nmap w :w<CR>
+nmap <Leader>w :w<CR>
 "cerrar
 nmap q :qa <CR>
 

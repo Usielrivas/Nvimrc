@@ -43,5 +43,5 @@ Ejecutar nvim
   
 ## Otros detalles
 
-- En el repositorio incluye el archivo coc-preferencia.json
-este se debe copiar manual al archivo CoConfig.
+<!-- - En el repositorio incluye el archivo coc-preferencia.json -->
+<!-- este se debe copiar manual al archivo CoConfig. -->

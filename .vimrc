@@ -24,7 +24,7 @@ set expandtab       " Expand TABs to spaces
 set laststatus=2
 set noshowmode
 
-"Plug Vim
+" Plug Vim
 call plug#begin('~/AppData/Local/nvim/plug_vim')
 
 "Cierra comillas y llaves automaticamnete
@@ -49,6 +49,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 "Plug Easymotion
 Plug 'easymotion/vim-easymotion'
+"comentariovim
+Plug 'tpope/vim-commentary'
 
 call plug#end()
 

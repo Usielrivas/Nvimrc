@@ -51,6 +51,8 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'easymotion/vim-easymotion'
 "comentariovim
 Plug 'tpope/vim-commentary'
+"surround
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
@@ -119,7 +121,20 @@ let g:coc_global_extensions = [
       \]
 
 "Enlaces
-so ~/AppData/Local/nvim/Config/coc-config.vim "Ajustes para coc
+
+function! VerificandoCoc()
+"La funcion permite verificar la instalacion de coc para evitar que nvim
+"muestre errores en una nueva instalacion
+if exists(':CocInfo')
+    so ~/AppData/Local/nvim/Config/coc-config.vim "Ajustes para coc
+else
+    echo 'Ejecuta :PlugInstall para finalizar la configuracion'
+endif
+
+endfunction
+
+au VimEnter * call VerificandoCoc()
+
 
 "Solucion de errores
 "

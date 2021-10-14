@@ -32,6 +32,12 @@ Plug 'tpope/vim-commentary'
 --"surround
 Plug 'tpope/vim-surround'
 
+Plug ( 'junegunn/fzf', { [ 'do' ]= function()
+vim.fn['fzf#install']()
+end
+})
+
+Plug 'junegunn/fzf.vim'
 
 vim.call('plug#end')
 

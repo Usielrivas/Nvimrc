@@ -1,29 +1,11 @@
 
-"Atajos personalizados
-
-"Asigna leader a espacio
-let mapleader=" "
-"nt + leader open nerdtree
-nmap <Leader>nt :NERDTreeFind<CR>
-"Cambio de pestaña/buffer
-nmap <Leader>z :bn<CR>
-"Cierra buffer
-nmap <Leader>x :bd<CR>
-"Agranda y encoge pestaña
-nmap <Leader>- <c-w><
-nmap <Leader>+ <c-w>>
-"Guardar
-nmap <Leader>w :w<CR>
-"cerrar
-nmap q :qa <CR>
+" Gif config
+nmap s <Plug>(easymotion-s2)
 
 "Ajustes para theme Ayu
 set termguicolors
 let ayucolor="dark"
 colorscheme ayu
-
-" s{char}{char} to move to {char}{char}
-nmap s <Plug>(easymotion-overwin-f2)
 
 "Ajustes para airline
 let g:airline#extensions#tabline#enabled = 1  " Mostrar buffers abiertos (como pestañas)

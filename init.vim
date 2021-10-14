@@ -1,5 +1,6 @@
 
 let &packpath=&runtimepath
-lua require('lua.init')
-lua require('lua.plugins')
+lua require('init')
+lua require('atajos')
+lua require('plugins')
 source ~/AppData/Local/nvim/.vimrc

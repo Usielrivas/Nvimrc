@@ -10,7 +10,7 @@ Plug 'Raimondi/delimitMate'
 --" Tema ayu Personalizado
 Plug 'Usielrivas/ayu-vim'
 --" Coc Plug de auto completado
---Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug ( 'neoclide/coc.nvim', {branch= 'release'} )
 --"Gestor de archivo
 Plug 'scrooloose/nerdtree'
 --"Plug para personalizar linea de estado
@@ -35,4 +35,4 @@ Plug 'tpope/vim-surround'
 
 vim.call('plug#end')
 
-print('it is ok')
+-- print('it is ok')

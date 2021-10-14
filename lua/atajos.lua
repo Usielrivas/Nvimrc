@@ -22,3 +22,5 @@ map('n', '<Leader>+', '<c-w>>', {noremap = true})
 map('n', '<Leader>h', '<c-w>h', {noremap = true})
 map('n', '<Leader>l', '<c-w>l', {noremap = true})
 
+
+map('n', 'f', ':FZF<CR>', {noremap = true})

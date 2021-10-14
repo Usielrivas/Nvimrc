@@ -19,5 +19,6 @@ map('n', '<Leader>x', ':bd<CR>', {noremap = true})
 map('n', '<Leader>-', '<c-w><', {noremap = true})
 map('n', '<Leader>+', '<c-w>>', {noremap = true})
 --" s{char}{char} to move to {char}{char}
-map('n', 't', '<c-w>', {noremap = true})
+map('n', '<Leader>h', '<c-w>h', {noremap = true})
+map('n', '<Leader>l', '<c-w>l', {noremap = true})
 

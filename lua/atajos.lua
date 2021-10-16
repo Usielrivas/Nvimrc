@@ -21,7 +21,7 @@ map('n', '<Leader>h', '<c-w>h', {noremap = true})
 map('n', '<Leader>l', '<c-w>l', {noremap = true})
 
 
-map('n', 'f', ':FZF<CR>', {noremap = true})
+map('n', 'f', ':Files<CR>', {noremap = true})
 
 map('n', 'gs', ':GFiles?<CR>', {noremap = true})
 

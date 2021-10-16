@@ -31,4 +31,4 @@ Plug 'junegunn/fzf.vim'
 
 vim.call('plug#end')
 
--- print('it is ok')
+-- print('it is okay')

@@ -30,3 +30,5 @@ au VimEnter * call VerificandoCoc()
 if has('win32')
     nmap <C-z> <Nop>
 endif
+
+

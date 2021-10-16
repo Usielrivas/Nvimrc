@@ -27,6 +27,6 @@ set.laststatus= 2
 set.showmode= false
 
 -- print('it is ok')
-vim.o.syntax = 'enable'
+-- vim.o.syntax = 'enable'
 
 --require('plugins')

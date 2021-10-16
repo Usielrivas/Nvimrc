@@ -1,19 +1,4 @@
 
-"Ajustes para theme Ayu
-set termguicolors
-let ayucolor="dark"
-colorscheme ayu
-
-"Ajustes para airline
-let g:airline#extensions#tabline#enabled = 1  " Mostrar buffers abiertos (como pestañas)
-let g:airline#extensions#tabline#fnamemod = ':t'  " Mostrar sólo el nombre del archivo
-let g:airline_theme= 'ayu_mirage'  "Tema para barra de estado
-
-"Ajustes para plug de Indentado
-let g:indentLine_fileTypeExclude = ['text', 'sh', 'help', 'terminal']
-let g:indentLine_bufNameExclude = ['NERD_tree.*', 'term:.*']
-let g:indentLine_defaultGroup = 'SpecialKey'
-
 "Ajuste para git status en nerdtree/ simbolos de estado
 let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Modified'  :'M',
@@ -29,7 +14,7 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ }
 
 "Ancho de nerdtree
-let g:NERDTreeWinSize=22
+" let g:NERDTreeWinSize=22
 
 "Automatiza la instalacion de plug para Coc
 let g:coc_global_extensions = [

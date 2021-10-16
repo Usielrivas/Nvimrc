@@ -54,6 +54,9 @@ Plug 'tpope/vim-commentary'
 "surround
 Plug 'tpope/vim-surround'
 
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 call plug#end()
 
 "Fin Plug vim
@@ -75,6 +78,8 @@ nmap <Leader>+ <c-w>>
 nmap <Leader>w :w<CR>
 "cerrar
 nmap q :qa <CR>
+"fzf
+nmap f :FZF <CR>
 
 "Ajustes para theme Ayu
 set termguicolors

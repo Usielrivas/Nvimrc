@@ -1,7 +1,4 @@
 
-" Gif config
-nmap s <Plug>(easymotion-s2)
-
 "Ajustes para theme Ayu
 set termguicolors
 let ayucolor="dark"

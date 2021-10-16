@@ -24,3 +24,7 @@ map('n', '<Leader>l', '<c-w>l', {noremap = true})
 
 
 map('n', 'f', ':FZF<CR>', {noremap = true})
+
+map('n', 's', '<Plug>(easymotion-overwin-f2)', {noremap = false})
+
+-- nmap s <Plug>(easymotion-overwin-f2)

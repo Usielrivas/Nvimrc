@@ -7,8 +7,6 @@ local map = vim.api.nvim_set_keymap
 
 -- "Guardar
 map('n', '<Leader>w', ':write<CR>', {noremap = true})
---Abre nerdtree gestor de archivo
-map('n', '<Leader>nt', ':NERDTreeFind<CR>', {noremap = true})
 -- cerrar
 map('n', 'q', ':qa<CR>', {noremap = true})
 --- "Cambio de pestaña/buffer
@@ -25,6 +23,3 @@ map('n', '<Leader>l', '<c-w>l', {noremap = true})
 
 map('n', 'f', ':FZF<CR>', {noremap = true})
 
-map('n', 's', '<Plug>(easymotion-overwin-f2)', {noremap = false})
-
--- nmap s <Plug>(easymotion-overwin-f2)

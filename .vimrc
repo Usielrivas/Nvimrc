@@ -1,21 +1,4 @@
 
-"Ajuste para git status en nerdtree/ simbolos de estado
-let g:NERDTreeGitStatusIndicatorMapCustom = {
-                \ 'Modified'  :'M',
-                \ 'Staged'    :'S',
-                \ 'Untracked' :'#',
-                \ 'Renamed'   :'R',
-                \ 'Unmerged'  :'═',
-                \ 'Deleted'   :'X',
-                \ 'Dirty'     :'*',
-                \ 'Ignored'   :'!',
-                \ 'Clean'     :'C',
-                \ 'Unknown'   :'?',
-                \ }
-
-"Ancho de nerdtree
-" let g:NERDTreeWinSize=22
-
 "Automatiza la instalacion de plug para Coc
 let g:coc_global_extensions = [
       \'coc-css',

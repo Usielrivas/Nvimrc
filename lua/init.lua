@@ -96,7 +96,7 @@ map('n', '<Leader>gc', ':Commits<CR>', {noremap = true})
 -- busqueda de palabra fzf
 map('n', 'rg', ':Rg<CR>', {noremap = true})
 --
-map('n', '<Leader>c', ':!', {noremap = true})
+map('n', 'cm', ':!', {noremap = true})
 
 
 -- Configuracion de tema ayu

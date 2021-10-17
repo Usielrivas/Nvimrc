@@ -25,4 +25,5 @@ map('n', 'f', ':Files<CR>', {noremap = true})
 
 map('n', 'gs', ':GFiles?<CR>', {noremap = true})
 map('n', '<Leader>gc', ':Commits<CR>', {noremap = true})
+map('n', 'rg', ':Rg<CR>', {noremap = true})
 

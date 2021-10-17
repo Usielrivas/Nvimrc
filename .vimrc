@@ -30,3 +30,6 @@ au VimEnter * call VerificandoCoc()
 if has('win32')
     nmap <C-z> <Nop>
 endif
+
+"Commit fzf
+let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h %an: %s%d %C(white)%C(bold)%cr"'

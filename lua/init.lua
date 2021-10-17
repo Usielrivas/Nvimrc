@@ -98,6 +98,8 @@ map('n', 'rg', ':Rg<CR>', {noremap = true})
 --
 map('n', 'cm', ':!', {noremap = true})
 
+map('n', '<Leader>nt', ':Buffers<CR>', {noremap = true})
+
 
 -- Configuracion de tema ayu
 

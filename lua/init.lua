@@ -87,12 +87,17 @@ map('n', '<Leader>+', '<c-w>>', {noremap = true})
 map('n', '<Leader>h', '<c-w>h', {noremap = true})
 map('n', '<Leader>l', '<c-w>l', {noremap = true})
 
-
+-- abre fzf files
 map('n', 'f', ':Files<CR>', {noremap = true})
-
+-- git status fzf
 map('n', 'gs', ':GFiles?<CR>', {noremap = true})
+-- git commit fzf
 map('n', '<Leader>gc', ':Commits<CR>', {noremap = true})
+-- busqueda de palabra fzf
 map('n', 'rg', ':Rg<CR>', {noremap = true})
+--
+map('n', '<Leader>c', ':!', {noremap = true})
+
 
 -- Configuracion de tema ayu
 

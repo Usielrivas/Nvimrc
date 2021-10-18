@@ -116,5 +116,9 @@ vim.g[ 'indentLine_fileTypeExclude' ] = {'text','sh','help','terminal'}
 vim.g[ 'gindentLine_bufNameExclude' ] = {'NERD_tree','term:.*'}
 vim.g[ 'gindentLine_defaultGroup' ] = 'SpecialKey'
 
+--"Automatiza la instalacion de plug para Coc
+vim.g[ 'coc_global_extensions' ]= { 'coc-css','coc-html','coc-emmet','coc-html-css-support','coc-tsserver' }
 
 
+--"Commit fzf
+vim.g[ 'fzf_commits_log_options' ] = '--graph --color=always --format="%C(auto)%h %an: %s%d %C(white)%C(bold)%cr"'

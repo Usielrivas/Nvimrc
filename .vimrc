@@ -1,13 +1,4 @@
 
-"Automatiza la instalacion de plug para Coc
-let g:coc_global_extensions = [
-      \'coc-css',
-      \'coc-html',
-      \'coc-emmet',
-      \'coc-html-css-support',
-      \'coc-tsserver'
-      \]
-
 "Enlaces
 
 function! VerificandoCoc()
@@ -31,5 +22,3 @@ if has('win32')
     nmap <C-z> <Nop>
 endif
 
-"Commit fzf
-let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h %an: %s%d %C(white)%C(bold)%cr"'

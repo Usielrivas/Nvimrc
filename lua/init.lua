@@ -39,8 +39,8 @@ vim.call('plug#begin', '~/AppData/Local/nvim/plug_vim')
 -- ....
 -- "Cierra comillas y llaves automaticamnete
 Plug 'Raimondi/delimitMate'
---" Tema ayu Personalizado
-Plug 'Usielrivas/ayu-vim'
+--" Tema onedark Personalizado
+Plug 'Usielrivas/onedark.nvim'
 --" Coc Plug de auto completado
 Plug ( 'neoclide/coc.nvim', {branch= 'release'} )
 --"plug para Indentado y no perder las buenas practicas de estructurado
@@ -105,7 +105,7 @@ map('n', '<Leader>nt', ':Buffers<CR>', {noremap = true})
 
 vim.opt.termguicolors= true
 vim.cmd [[
-    colorscheme ayu
+    colorscheme onedark
 ]]
 -- "let ayucolor="dark"
 --

@@ -40,7 +40,9 @@ vim.call('plug#begin', '~/AppData/Local/nvim/plug_vim')
 -- "Cierra comillas y llaves automaticamnete
 Plug 'Raimondi/delimitMate'
 --" Tema onedark Personalizado
-Plug 'Usielrivas/onedark.nvim'
+-- Plug 'Usielrivas/onedark.nvim'
+-- Dracula
+Plug ( 'dracula/vim', { as= 'dracula' } )
 -- " Coc Plug de auto completado
 Plug ( 'neoclide/coc.nvim', {branch= 'release'} )
 --"plug para Indentado y no perder las buenas practicas de estructurado
@@ -105,8 +107,9 @@ map('n', '<Leader>nt', ':Buffers<CR>', {noremap = true})
 
 vim.opt.termguicolors= true
 vim.cmd [[
-    colorscheme onedark
-]]
+    colorscheme dracula
+    hi Normal guibg=#1d1f26
+ ]]
 -- "let ayucolor="dark"
 --
 

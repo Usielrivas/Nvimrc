@@ -56,12 +56,7 @@ Plug 'tpope/vim-commentary'
 --"surround
 Plug 'tpope/vim-surround'
 
-Plug ( 'junegunn/fzf', { [ 'do' ]= function()
-vim.fn['fzf#install']()
-end
-})
-
-Plug 'junegunn/fzf.vim'
+Plug 'preservim/nerdtree'
 
 vim.call('plug#end')
 
@@ -89,18 +84,7 @@ map('n', '<Leader>+', '<c-w>>', {noremap = true})
 map('n', '<Leader>h', '<c-w>h', {noremap = true})
 map('n', '<Leader>l', '<c-w>l', {noremap = true})
 
--- abre fzf files
-map('n', 'f', ':Files<CR>', {noremap = true})
--- git status fzf
-map('n', 'gs', ':GFiles?<CR>', {noremap = true})
--- git commit fzf
-map('n', '<Leader>gc', ':Commits<CR>', {noremap = true})
--- busqueda de palabra fzf
-map('n', 'rg', ':Rg<CR>', {noremap = true})
---
-map('n', 'cm', ':!', {noremap = true})
-
-map('n', '<Leader>nt', ':Buffers<CR>', {noremap = true})
+map('n', '<Leader>nt', ':NERDTree<CR>', {noremap = true})
 
 
 -- Configuracion de tema ayu

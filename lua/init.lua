@@ -85,6 +85,7 @@ map('n', '<Leader>h', '<c-w>h', {noremap = true})
 map('n', '<Leader>l', '<c-w>l', {noremap = true})
 
 map('n', '<Leader>nt', ':NERDTreeFind<CR>', {noremap = true})
+--map('n', '<Leader>a', ':lua VerificandoCoc()<CR>', {noremap = true})
 
 
 -- Configuracion de tema ayu
@@ -104,7 +105,7 @@ vim.g[ 'gindentLine_bufNameExclude' ] = {'NERD_tree','term:.*'}
 vim.g[ 'gindentLine_defaultGroup' ] = 'SpecialKey'
 
 --"Automatiza la instalacion de plug para Coc
-vim.g[ 'coc_global_extensions' ]= { 'coc-css','coc-html','coc-emmet','coc-html-css-support','coc-tsserver' }
+vim.g[ 'coc_global_extensions' ]= { 'coc-css','coc-html','coc-emmet','coc-html-css-support','coc-tsserver','coc-vetur' }
 
 
 --"Commit fzf
@@ -116,6 +117,7 @@ local st= vim.fn.exists(':CocInfo')
 
 if st == 2 then
     vim.cmd('so ~/AppData/Local/nvim/Config/coc-config.vim') --Ajustes para Coc
+    print('Todo Ok')
 else
     print('Ejecuta :PlugInstall para finalizar la configuracion')
 end

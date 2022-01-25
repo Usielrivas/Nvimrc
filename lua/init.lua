@@ -44,7 +44,7 @@ Plug 'Raimondi/delimitMate'
 -- Dracula
 Plug ( 'dracula/vim', { as= 'dracula' } )
 -- " Coc Plug de auto completado
-Plug ( 'neoclide/coc.nvim', {branch= 'release'} )
+-- Plug ( 'neoclide/coc.nvim', {branch= 'release'} )
 --"plug para Indentado y no perder las buenas practicas de estructurado
 Plug 'Yggdroot/indentLine'
 --"Optimiza vim para archivos grandes
@@ -103,26 +103,26 @@ vim.g[ 'gindentLine_bufNameExclude' ] = {'NERD_tree','term:.*'}
 vim.g[ 'gindentLine_defaultGroup' ] = 'SpecialKey'
 
 --"Automatiza la instalacion de plug para Coc
-vim.g[ 'coc_global_extensions' ]= { 'coc-css','coc-html','coc-emmet','coc-html-css-support','coc-tsserver','coc-vetur','coc-phpls','coc-prettier' }
+-- vim.g[ 'coc_global_extensions' ]= { 'coc-css','coc-html','coc-emmet','coc-html-css-support','coc-tsserver','coc-vetur','coc-phpls','coc-prettier' }
 
 
---"Commit fzf
-vim.g[ 'fzf_commits_log_options' ] = '--graph --color=always --format="%C(auto)%h %an: %s%d %C(white)%C(bold)%cr"'
+-- "Commit fzf
+-- vim.g[ 'fzf_commits_log_options' ] = '--graph --color=always --format="%C(auto)%h %an: %s%d %C(white)%C(bold)%cr"'
 
-function VerificandoCoc()
+--function VerificandoCoc()
 
-local st= vim.fn.exists(':CocInfo')
+-- local st= vim.fn.exists(':CocInfo')
 
-if st == 2 then
-    vim.cmd('so ~/AppData/Local/nvim/Config/coc-config.vim') --Ajustes para Coc
-    print('Todo Ok')
-else
-    print('Ejecuta :PlugInstall para finalizar la configuracion')
-end
+-- if st == 2 then
+--    vim.cmd('so ~/AppData/Local/nvim/Config/coc-config.vim') --Ajustes para Coc
+--    print('Todo Ok')
+--else
+--    print('Ejecuta :PlugInstall para finalizar la configuracion')
+--end
 
-end
+-- end
 
-local cl= vim.cmd('au VimEnter * lua VerificandoCoc()')
+-- local cl= vim.cmd('au VimEnter * lua VerificandoCoc()')
 -- print(cl)
 
 -- "Esto corrige el bug de control + z que freeza nvim en windows

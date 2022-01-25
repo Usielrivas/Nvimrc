@@ -1,11 +1,11 @@
 # Nvimrc
 
-<b>*Nota:</b> Archivo .vimrc solo probado en Windows CMD y Neovim 5.0
+<b>*Nota:</b> Archivo .vimrc solo probado en Windows CMD y Neovim 5.0, 6.0
 
   ## Descripción General
 
 Archivos de configuración para Nvim, inicia a trabajar en nvim con una preconfiguración orientada
-al desarrollo front-end. La configuración incluye un tema dark basado en un fork de ayu-vim e incluye 
+al desarrollo front-end. La configuración incluye un tema dark(Dracula) e incluye 
 algunos de los plugins más populares como la herramienta de autocompletado [coc](https://github.com/neoclide/coc.nvim).
 
 ## Requisitos

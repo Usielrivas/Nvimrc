@@ -3,5 +3,6 @@
     "vue-html": "html",
     "javascript": "javascriptreact",
     "javascript": "javascript"
-  }
+  },
+  "prettier.tabWidth": 2
 }

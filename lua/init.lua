@@ -47,6 +47,7 @@ Plug 'tpope/vim-commentary'
 --Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
 Plug 'mattn/emmet-vim'
+Plug 'BrandonRoehl/auto-omni'
 
 vim.call('plug#end')
 
@@ -73,7 +74,6 @@ map('n', '<Leader>h', '<c-w>h', {noremap = true})
 map('n', '<Leader>l', '<c-w>l', {noremap = true})
 
 map('n', '<Leader>nt', ':NERDTreeFind<CR>', {noremap = true})
---map('i', '<[a-z0-9]><Tab>', '<c-n>', {noremap = true})
 
 -- Configuracion de tema ayu
 
@@ -81,7 +81,6 @@ vim.opt.termguicolors= true
 vim.cmd [[
     colorscheme dracula
     hi Normal guibg=#1d1f26
-    command! -nargs=0 Prettier :CocCommand prettier.formatFile
  ]]
 
 -- "Ajustes para plug de Indentado
@@ -91,10 +90,17 @@ vim.g[ 'gindentLine_defaultGroup' ] = 'SpecialKey'
 
 vim.g[ 'user_emmet_install_global' ] = 0
 vim.cmd [[
-    autocmd FileType html,css EmmetInstall
+    autocmd FileType html,css,javascriptreact EmmetInstall
     let g:user_emmet_expandabbr_key='<Tab>'
-    imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+    imap <expr> <Leader><tab> emmet#expandAbbrIntelligent("\<tab>")
+
+filetype plugin on
+
+" Enable omni for all types and auto set it
+" [Recomended]
+set omnifunc=syntaxcomplete#Complete
 ]]
+
 
 -- "Esto corrige el bug de control + z que freeza nvim en windows
 if vim.fn.has('win32') == 1 then

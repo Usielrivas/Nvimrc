@@ -48,7 +48,6 @@ Plug 'tpope/vim-commentary'
 Plug 'preservim/nerdtree'
 Plug 'mattn/emmet-vim'
 Plug 'BrandonRoehl/auto-omni'
-
 vim.call('plug#end')
 
 -- "Atajos personalizados
@@ -95,17 +94,11 @@ vim.cmd [[
     imap <expr> <Leader><tab> emmet#expandAbbrIntelligent("\<tab>")
 
 filetype plugin on
-
-" Enable omni for all types and auto set it
-" [Recomended]
 set omnifunc=syntaxcomplete#Complete
-]]
 
+]]
 
 -- "Esto corrige el bug de control + z que freeza nvim en windows
 if vim.fn.has('win32') == 1 then
     map('n', '<C-z>', '<Nop>', {noremap = true})
 end
-
-
-

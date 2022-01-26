@@ -48,17 +48,17 @@ Plug ( 'dracula/vim', { as= 'dracula' } )
 --"plug para Indentado y no perder las buenas practicas de estructurado
 Plug 'Yggdroot/indentLine'
 --"Optimiza vim para archivos grandes
-Plug 'vim-scripts/LargeFile'
+--Plug 'vim-scripts/LargeFile'
 --"Plug para usar Git en vim
 Plug 'tpope/vim-fugitive'
 --"comentariovim
 Plug 'tpope/vim-commentary'
 --"surround
-Plug 'tpope/vim-surround'
+--Plug 'tpope/vim-surround'
 
 Plug 'preservim/nerdtree'
 
-Plug 'neovim/nvim-lspconfig'
+--Plug 'neovim/nvim-lspconfig'
 
 vim.call('plug#end')
 
@@ -104,7 +104,7 @@ vim.g[ 'indentLine_fileTypeExclude' ] = {'text','sh','help','terminal'}
 vim.g[ 'gindentLine_bufNameExclude' ] = {'NERD_tree','term:.*'}
 vim.g[ 'gindentLine_defaultGroup' ] = 'SpecialKey'
 
-require'lspconfig'.cssmodules_ls.setup{}
+--require'lspconfig'.cssmodules_ls.setup{}
 
 
 

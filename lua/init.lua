@@ -58,6 +58,8 @@ Plug 'tpope/vim-surround'
 
 Plug 'preservim/nerdtree'
 
+Plug 'neovim/nvim-lspconfig'
+
 vim.call('plug#end')
 
 -- print('it is okay')
@@ -101,6 +103,10 @@ vim.cmd [[
 vim.g[ 'indentLine_fileTypeExclude' ] = {'text','sh','help','terminal'} 
 vim.g[ 'gindentLine_bufNameExclude' ] = {'NERD_tree','term:.*'}
 vim.g[ 'gindentLine_defaultGroup' ] = 'SpecialKey'
+
+require'lspconfig'.cssmodules_ls.setup{}
+
+
 
 --"Automatiza la instalacion de plug para Coc
 -- vim.g[ 'coc_global_extensions' ]= { 'coc-css','coc-html','coc-emmet','coc-html-css-support','coc-tsserver','coc-vetur','coc-phpls','coc-prettier' }

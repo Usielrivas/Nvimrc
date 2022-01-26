@@ -27,9 +27,6 @@ set.laststatus= 2
 set.showmode= false
 
 -- print('it is ok')
--- vim.o.syntax = 'enable'
-
---require('plugins')
 
 local Plug = vim.fn['plug#']
 
@@ -39,30 +36,19 @@ vim.call('plug#begin', '~/AppData/Local/nvim/plug_vim')
 -- ....
 -- "Cierra comillas y llaves automaticamnete
 Plug 'Raimondi/delimitMate'
---" Tema onedark Personalizado
--- Plug 'Usielrivas/onedark.nvim'
 -- Dracula
 Plug ( 'dracula/vim', { as= 'dracula' } )
--- " Coc Plug de auto completado
--- Plug ( 'neoclide/coc.nvim', {branch= 'release'} )
 --"plug para Indentado y no perder las buenas practicas de estructurado
 Plug 'Yggdroot/indentLine'
---"Optimiza vim para archivos grandes
---Plug 'vim-scripts/LargeFile'
 --"Plug para usar Git en vim
 Plug 'tpope/vim-fugitive'
 --"comentariovim
 Plug 'tpope/vim-commentary'
---"surround
 --Plug 'tpope/vim-surround'
-
 Plug 'preservim/nerdtree'
-
---Plug 'neovim/nvim-lspconfig'
+Plug 'mattn/emmet-vim'
 
 vim.call('plug#end')
-
--- print('it is okay')
 
 -- "Atajos personalizados
 
@@ -87,8 +73,7 @@ map('n', '<Leader>h', '<c-w>h', {noremap = true})
 map('n', '<Leader>l', '<c-w>l', {noremap = true})
 
 map('n', '<Leader>nt', ':NERDTreeFind<CR>', {noremap = true})
---map('n', '<Leader>a', ':lua VerificandoCoc()<CR>', {noremap = true})
-
+--map('i', '<[a-z0-9]><Tab>', '<c-n>', {noremap = true})
 
 -- Configuracion de tema ayu
 
@@ -104,35 +89,17 @@ vim.g[ 'indentLine_fileTypeExclude' ] = {'text','sh','help','terminal'}
 vim.g[ 'gindentLine_bufNameExclude' ] = {'NERD_tree','term:.*'}
 vim.g[ 'gindentLine_defaultGroup' ] = 'SpecialKey'
 
---require'lspconfig'.cssmodules_ls.setup{}
-
-
-
---"Automatiza la instalacion de plug para Coc
--- vim.g[ 'coc_global_extensions' ]= { 'coc-css','coc-html','coc-emmet','coc-html-css-support','coc-tsserver','coc-vetur','coc-phpls','coc-prettier' }
-
-
--- "Commit fzf
--- vim.g[ 'fzf_commits_log_options' ] = '--graph --color=always --format="%C(auto)%h %an: %s%d %C(white)%C(bold)%cr"'
-
---function VerificandoCoc()
-
--- local st= vim.fn.exists(':CocInfo')
-
--- if st == 2 then
---    vim.cmd('so ~/AppData/Local/nvim/Config/coc-config.vim') --Ajustes para Coc
---    print('Todo Ok')
---else
---    print('Ejecuta :PlugInstall para finalizar la configuracion')
---end
-
--- end
-
--- local cl= vim.cmd('au VimEnter * lua VerificandoCoc()')
--- print(cl)
+vim.g[ 'user_emmet_install_global' ] = 0
+vim.cmd [[
+    autocmd FileType html,css EmmetInstall
+    let g:user_emmet_expandabbr_key='<Tab>'
+    imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+]]
 
 -- "Esto corrige el bug de control + z que freeza nvim en windows
 if vim.fn.has('win32') == 1 then
     map('n', '<C-z>', '<Nop>', {noremap = true})
 end
+
+
 

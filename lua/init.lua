@@ -47,7 +47,8 @@ Plug 'tpope/vim-commentary'
 --Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
 Plug 'mattn/emmet-vim'
-Plug 'BrandonRoehl/auto-omni'
+Plug 'lifepillar/vim-mucomplete'
+
 vim.call('plug#end')
 
 -- "Atajos personalizados
@@ -89,13 +90,14 @@ vim.g[ 'gindentLine_defaultGroup' ] = 'SpecialKey'
 
 vim.g[ 'user_emmet_install_global' ] = 0
 vim.cmd [[
-    autocmd FileType html,css,javascriptreact EmmetInstall
+    autocmd FileType html,css,javascriptreact,php EmmetInstall
     let g:user_emmet_expandabbr_key='<Tab>'
     imap <expr> <Leader><tab> emmet#expandAbbrIntelligent("\<tab>")
-
-filetype plugin on
-set omnifunc=syntaxcomplete#Complete
-
+set completeopt+=menuone
+set completeopt+=noselect
+set shortmess+=c   " Shut off completion messages
+set belloff+=ctrlg " Add only if Vim beeps during completion
+let g:mucomplete#enable_auto_at_startup = 1
 ]]
 
 -- "Esto corrige el bug de control + z que freeza nvim en windows

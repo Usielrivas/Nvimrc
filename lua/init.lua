@@ -45,9 +45,10 @@ Plug 'tpope/vim-fugitive'
 --"comentariovim
 Plug 'tpope/vim-commentary'
 --Plug 'tpope/vim-surround'
-Plug 'preservim/nerdtree'
+--Plug 'preservim/nerdtree'
 Plug 'mattn/emmet-vim'
-Plug 'lifepillar/vim-mucomplete'
+--Plug 'lifepillar/vim-mucomplete'
+Plug 'BrandonRoehl/auto-omni'
 
 vim.call('plug#end')
 
@@ -73,7 +74,7 @@ map('n', '<Leader>+', '<c-w>>', {noremap = true})
 map('n', '<Leader>h', '<c-w>h', {noremap = true})
 map('n', '<Leader>l', '<c-w>l', {noremap = true})
 
-map('n', '<Leader>nt', ':NERDTreeFind<CR>', {noremap = true})
+map('n', '<Leader>nt', ':Lexplore<CR>', {noremap = true})
 
 -- Configuracion de tema ayu
 
@@ -93,11 +94,11 @@ vim.cmd [[
     autocmd FileType html,css,javascriptreact,php EmmetInstall
     let g:user_emmet_expandabbr_key='<Tab>'
     imap <expr> <Leader><tab> emmet#expandAbbrIntelligent("\<tab>")
-set completeopt+=menuone
-set completeopt+=noselect
-set shortmess+=c   " Shut off completion messages
-set belloff+=ctrlg " Add only if Vim beeps during completion
-let g:mucomplete#enable_auto_at_startup = 1
+
+let g:netrw_banner=0
+let g:netrw_winsize = 15
+let g:netrw_keepdir = 0
+
 ]]
 
 -- "Esto corrige el bug de control + z que freeza nvim en windows

@@ -49,6 +49,8 @@ Plug 'tpope/vim-commentary'
 Plug 'mattn/emmet-vim'
 --Plug 'lifepillar/vim-mucomplete'
 Plug 'BrandonRoehl/auto-omni'
+--
+Plug 'mhartington/formatter.nvim'
 
 vim.call('plug#end')
 
@@ -99,7 +101,67 @@ let g:netrw_banner=0
 let g:netrw_winsize = 15
 let g:netrw_keepdir = 0
 
+lua require('formatter').setup(...)
+" Provided by setup function
+nnoremap <silent> <leader>f :Format<CR>
+
 ]]
+
+-- Configuracion para prettier, se debe instalar con npm -g
+require('formatter').setup({
+  filetype = {
+    javascript = {
+      -- prettier
+      function()
+        return {
+          exe = "prettier",
+          args = {"--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), '--single-quote'},
+          stdin = true
+        }
+      end
+    },
+    javascriptreact = {
+      -- prettier
+      function()
+        return {
+          exe = "prettier",
+          args = {"--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), '--single-quote'},
+          stdin = true
+        }
+      end
+    },
+    html = {
+      -- prettier
+      function()
+        return {
+          exe = "prettier",
+          args = {"--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), '--single-quote'},
+          stdin = true
+        }
+      end
+    },
+    css = {
+      -- prettier
+      function()
+        return {
+          exe = "prettier",
+          args = {"--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), '--single-quote'},
+          stdin = true
+        }
+      end
+    },
+    json = {
+      -- prettier
+      function()
+        return {
+          exe = "prettier",
+          args = {"--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), '--single-quote'},
+          stdin = true
+        }
+      end
+    },
+  }
+})
 
 -- "Esto corrige el bug de control + z que freeza nvim en windows
 if vim.fn.has('win32') == 1 then

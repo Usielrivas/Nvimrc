@@ -22,6 +22,8 @@ map("n", "<Leader>l", "<c-w>l", {noremap = true})
 
 map("n", "<Leader>nt", ":Lexplore<CR>", {noremap = true})
 
+map("i", "jj", "<esc>", {noremap = true})
+
 -- "Esto corrige el bug de control + z que freeza nvim en windows
 if vim.fn.has("win32") == 1 then
     map("n", "<C-z>", "<Nop>", {noremap = true})

@@ -16,7 +16,7 @@ Plug 'tpope/vim-fugitive'
 --"comentariovim
 Plug 'tpope/vim-commentary'
 --Plug 'tpope/vim-surround'
---Plug 'preservim/nerdtree'
+Plug 'preservim/nerdtree'
 Plug 'mattn/emmet-vim'
 --Plug 'lifepillar/vim-mucomplete'
 --Plug 'BrandonRoehl/auto-omni'
@@ -26,5 +26,7 @@ Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-buffer'
 --
 Plug 'mhartington/formatter.nvim'
+--
+Plug 'sheerun/vim-polyglot'
 
 vim.call('plug#end')

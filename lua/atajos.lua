@@ -18,11 +18,14 @@ map("n", "<Leader>-", "<c-w><", {noremap = true})
 map("n", "<Leader>+", "<c-w>>", {noremap = true})
 --" s{char}{char} to move to {char}{char}
 map("n", "<Leader>h", "<c-w>h", {noremap = true})
+map("n", "<Leader>j", "<c-w>j", {noremap = true})
+map("n", "<Leader>k", "<c-w>k", {noremap = true})
 map("n", "<Leader>l", "<c-w>l", {noremap = true})
 
 map("n", "<Leader>nt", ":NERDTreeFind<CR>", {noremap = true})
 
 map("i", "jj", "<esc>", {noremap = true})
+map("t", "jj", '<C-\\><C-n>', {noremap = true})
 
 -- "Esto corrige el bug de control + z que freeza nvim en windows
 if vim.fn.has("win32") == 1 then

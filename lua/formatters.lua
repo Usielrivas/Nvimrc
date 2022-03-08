@@ -1,97 +1,26 @@
+function conf()
+return {
+          exe = "prettier",
+          args = {"--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), '--single-quote'},
+          stdin = true
+        }
+      end
+
 
 -- Configuracion para prettier, se debe instalar con npm -g
 require('formatter').setup({
   filetype = {
-    javascript = {
-      -- prettier
-      function()
-        return {
-          exe = "prettier",
-          args = {"--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), '--single-quote'},
-          stdin = true
-        }
-      end
-    },
-    typescriptreact = {
-      -- prettier
-      function()
-        return {
-          exe = "prettier",
-          args = {"--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), '--single-quote'},
-          stdin = true
-        }
-      end
-    },
-    javascriptreact = {
-      -- prettier
-      function()
-        return {
-          exe = "prettier",
-          args = {"--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), '--single-quote'},
-          stdin = true
-        }
-      end
-    },
-    html = {
-      -- prettier
-      function()
-        return {
-          exe = "prettier",
-          args = {"--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), '--single-quote'},
-          stdin = true
-        }
-      end
-    },
-    css = {
-      -- prettier
-      function()
-        return {
-          exe = "prettier",
-          args = {"--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), '--single-quote'},
-          stdin = true
-        }
-      end
-    },
-    json = {
-      -- prettier
-      function()
-        return {
-          exe = "prettier",
-          args = {"--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), '--single-quote'},
-          stdin = true
-        }
-      end
-    },
-    php = {
-      -- prettier
-      function()
-        return {
-          exe = "prettier",
-          args = {"--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), '--single-quote'},
-          stdin = true
-        }
-      end
-    },
-    vue = {
-      -- prettier
-      function()
-        return {
-          exe = "prettier",
-          args = {"--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), '--single-quote'},
-          stdin = true
-        }
-      end
-    },
-    svelte = {
-      -- prettier
-      function()
-        return {
-          exe = "prettier",
-          args = {"--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), '--single-quote'},
-          stdin = true
-        }
-      end
-    },
+    javascript = { conf },
+    typescriptreact = { conf },
+    javascriptreact = { conf },
+    html = { conf },
+    css = { conf },
+    json = { conf },
+    php = { conf },
+    vue = { conf },
+    svelte = { conf },
+    scss = { conf },
+   -- lua = { conf },
   }
 })
 

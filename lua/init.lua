@@ -31,8 +31,8 @@ set.showmode= false
 require('plugins')
 require('atajos')
 require('plugins_config')
-require('autocomplete')
-require('formatters')
+--require('autocomplete')
+--require('formatters')
 
 
 

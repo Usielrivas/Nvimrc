@@ -17,16 +17,25 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 --Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
-Plug 'mattn/emmet-vim'
---Plug 'lifepillar/vim-mucomplete'
---Plug 'BrandonRoehl/auto-omni'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-omni'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-buffer'
---
-Plug 'mhartington/formatter.nvim'
+-- " Coc Plug de auto completado
+Plug ( 'neoclide/coc.nvim', {branch= 'release'} )
 --
 Plug 'sheerun/vim-polyglot'
 
 vim.call('plug#end')
+
+function VerificandoCoc()
+
+local st= vim.fn.exists(':CocInfo')
+
+if st == 2 then
+    vim.cmd('so ~/AppData/Local/nvim/Config/coc-config.vim') --Ajustes para Coc
+    print('Todo Ok')
+else
+    print('Ejecuta :PlugInstall para finalizar la configuracion')
+end
+
+end
+
+local cl= vim.cmd('au VimEnter * lua VerificandoCoc()')
+-- print(cl)

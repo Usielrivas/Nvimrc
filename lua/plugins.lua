@@ -17,16 +17,19 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 --Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
-Plug 'mattn/emmet-vim'
 --Plug 'lifepillar/vim-mucomplete'
 --Plug 'BrandonRoehl/auto-omni'
+
 Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-omni'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-buffer'
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
 --
 Plug 'mhartington/formatter.nvim'
 --
 Plug 'sheerun/vim-polyglot'
 
 vim.call('plug#end')
+
+

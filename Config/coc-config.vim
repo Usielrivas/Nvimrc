@@ -1,3 +1,7 @@
+let g:coc_filetype_map = {
+  \ 'eruby': 'html',
+  \ }
+
 "Ajustes COC.vim
 
 " TextEdit might fail if hidden is not set.

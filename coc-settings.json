@@ -2,7 +2,9 @@
   "emmet.includeLanguages ": {
     "vue-html": "html",
     "javascript": "javascriptreact",
-    "javascript": "javascript"
+    "javascript": "javascript",
+    "erb":  "html",
   },
+"emmet.extensionsPath":"~/AppData/Local/nvim",
   "prettier.tabWidth": 2
 }

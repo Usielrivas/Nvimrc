@@ -5,8 +5,8 @@ cmp.setup(
         snippet = {
             -- REQUIRED - you must specify a snippet engine
             expand = function(args)
-                vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-                -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+                -- vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+                require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
                 -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
                 -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
             end
@@ -40,9 +40,65 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 -- The following example advertise capabilities to `clangd`.
 
-local servers = { "solargraph", 'tsserver' }
-for _, lsp in pairs(servers) do
-  require('lspconfig')[lsp].setup {
+-- local servers = { "solargraph", 'tsserver', "emmet_ls" }
+-- for _, lsp in pairs(servers) do
+--   require('lspconfig')[lsp].setup {
+--   capabilities = capabilities,
+--   }
+-- end
+require("lspconfig").tsserver.setup{
+on_attach = on_attach,
+    flags = {
+      -- This will be the default in neovim 0.7+
+      debounce_text_changes = 150,
+    },
+
   capabilities = capabilities,
-  }
-end
+
+    root_dir = function(fname)
+        return vim.fn.getcwd()
+    end
+}
+
+require("lspconfig").solargraph.setup{
+
+ on_attach = on_attach,
+    flags = {
+      -- This will be the default in neovim 0.7+
+      debounce_text_changes = 150,
+    },
+
+  capabilities = capabilities,
+    root_dir = function(fname)
+        return vim.fn.getcwd()
+    end
+}
+
+require("lspconfig").emmet_ls.setup{
+on_attach = on_attach,
+    flags = {
+      -- This will be the default in neovim 0.7+
+      debounce_text_changes = 150,
+    },
+
+  capabilities = capabilities,
+
+    filetypes= {"html","css","javascriptreact","typescriptreact","eruby"}
+}
+--
+--
+--
+--
+--
+--
+--
+--
+--
+--
+--
+--
+--
+--
+--
+--
+--

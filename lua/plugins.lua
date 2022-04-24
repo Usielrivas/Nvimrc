@@ -17,6 +17,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 --Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
+Plug 'L3MON4D3/LuaSnip'
 --Plug 'lifepillar/vim-mucomplete'
 --Plug 'BrandonRoehl/auto-omni'
 

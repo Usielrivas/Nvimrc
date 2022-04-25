@@ -31,6 +31,7 @@ set.showmode= false
 require('plugins')
 require('atajos')
 require('plugins_config')
+require('LSP')
 --require('autocomplete')
 --require('formatters')
 

@@ -17,25 +17,31 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 --Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
--- " Coc Plug de auto completado
-Plug ( 'neoclide/coc.nvim', {branch= 'release'} )
 --
 Plug 'sheerun/vim-polyglot'
+--
+Plug 'L3MON4D3/LuaSnip'
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-omni'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/nvim-cmp'
 
 vim.call('plug#end')
 
-function VerificandoCoc()
+-- function VerificandoCoc()
 
-local st= vim.fn.exists(':CocInfo')
+-- local st= vim.fn.exists(':CocInfo')
 
-if st == 2 then
-    vim.cmd('so ~/AppData/Local/nvim/Config/coc-config.vim') --Ajustes para Coc
-    print('Todo Ok')
-else
-    print('Ejecuta :PlugInstall para finalizar la configuracion')
-end
+-- if st == 2 then
+--     vim.cmd('so ~/AppData/Local/nvim/Config/coc-config.vim') --Ajustes para Coc
+--     print('Todo Ok')
+-- else
+--     print('Ejecuta :PlugInstall para finalizar la configuracion')
+-- end
 
-end
+-- end
 
-local cl= vim.cmd('au VimEnter * lua VerificandoCoc()')
--- print(cl)
+-- local cl= vim.cmd('au VimEnter * lua VerificandoCoc()')
+-- -- print(cl)

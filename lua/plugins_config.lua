@@ -6,6 +6,22 @@ vim.cmd [[
     hi Normal guibg=#1d1f26
     command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
+"Ajuste para git status en nerdtree/ simbolos de estado
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+                \ 'Modified'  :'M',
+                \ 'Staged'    :'S',
+                \ 'Untracked' :'#',
+                \ 'Renamed'   :'R',
+                \ 'Unmerged'  :'═',
+                \ 'Deleted'   :'X',
+                \ 'Dirty'     :'*',
+                \ 'Ignored'   :'!',
+                \ 'Clean'     :'C',
+                \ 'Unknown'   :'?',
+                \ }
+
+"Ancho de nerdtree
+let g:NERDTreeWinSize=22
  ]]
 
 -- "Ajustes para plug de Indentado

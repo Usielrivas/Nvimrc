@@ -2,7 +2,7 @@
 local set= vim.opt
  -- "Ajustes Basico
 set.number= true 
-set.mouse= 'a'
+-- set.mouse= 'a' for mouse
 set.numberwidth= 1
 set.clipboard= 'unnamed'
 -- syntax enable

@@ -20,3 +20,6 @@ s::>
 q::'
 w::`
 e::\
+
+Up::WheelUp
+Down::WheelDown

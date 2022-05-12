@@ -26,7 +26,7 @@ map("n", "<Leader>l", "<c-w>l", {noremap = true})
 
 map("n", "<Leader>f", ":Prettier<CR>", {noremap = true})
 
-map("n", "<Leader>nt", ":NERDTreeFind<CR>", {noremap = true})
+map("n", "<Leader>nt", ":NERDTreeToggleVCS<CR>", {noremap = true})
 
 map("i", "jj", "<esc>", {noremap = true})
 map("t", "jj", '<C-\\><C-n>', {noremap = true})
